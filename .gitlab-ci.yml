@@ -18,7 +18,7 @@ variables:
   KDEB_CHANGELOG_DIST: "bookworm"
   KCONFIG_CONFIG: "CONFIGS/xanmod/gcc/config_$psabi"
 
-6.11 x64v2:
+6.12 x64v2:
   tags: [saas-linux-xlarge-amd64]
   stage: build
   only:
@@ -35,7 +35,7 @@ variables:
     - assets/*dbg*
   timeout: 1h
 
-6.11 x64v3:
+6.12 x64v3:
   tags: [saas-linux-xlarge-amd64]
   stage: build
   only:
