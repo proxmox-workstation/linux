@@ -93,6 +93,8 @@ static struct wmi_driver aaeon_wmi_driver = {
 
 module_wmi_driver(aaeon_wmi_driver);
 
+MODULE_IMPORT_NS(ASUS_WMI);
+
 MODULE_DEVICE_TABLE(wmi, aaeon_wmi_id_table);
 MODULE_AUTHOR("Kunyang Fan <kunyang_fan@aaeon.com.tw>");
 MODULE_DESCRIPTION("AAEON Board WMI driver");

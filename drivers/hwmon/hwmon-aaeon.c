@@ -559,6 +559,8 @@ static struct platform_driver aaeon_hwmon_driver = {
 
 module_platform_driver_probe(aaeon_hwmon_driver, aaeon_hwmon_probe);
 
+MODULE_IMPORT_NS(ASUS_WMI);
+
 MODULE_ALIAS("platform:hwmon-aaeon");
 MODULE_DESCRIPTION("AAEON Hardware Monitoring Driver");
 MODULE_AUTHOR("Edward Lin <edward1_lin@aaeon.com.tw>");

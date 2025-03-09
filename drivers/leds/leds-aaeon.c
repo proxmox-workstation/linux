@@ -136,6 +136,8 @@ static struct platform_driver aaeon_led_driver = {
 
 module_platform_driver_probe(aaeon_led_driver, aaeon_led_probe);
 
+MODULE_IMPORT_NS(ASUS_WMI);
+
 MODULE_ALIAS("platform:leds-aaeon");
 MODULE_DESCRIPTION("AAEON LED Driver");
 MODULE_AUTHOR("Kunyang Fan <kunyang_fan@asus.com>");
