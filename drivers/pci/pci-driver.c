@@ -515,7 +515,11 @@ static void pci_device_shutdown(struct device *dev)
 	 * wakeup setting is in place, or a workaround is used. Hence keep it
 	 * as is. But this breaks nvidia, so avoid it.
 	 */
-	if (pci_dev->vendor != 0x10de) {
+	if (
+		(!(pci_dev->vendor != 0x10de)) &&
+		(!((pci_dev->vendor == 0x1987) && (pci_dev->device == 0x5018))) &&
+		(!((pci_dev->vendor == 0x1d97) && (pci_dev->device == 0x1602)))
+	){
 		if (!kexec_in_progress && pci_dev->current_state == PCI_D0)
 			pci_prepare_to_sleep(pci_dev);
 	}
